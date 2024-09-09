@@ -52,9 +52,9 @@ def isort: List Nat → List Nat
 | [] => []
 | x::xs => insert' x (isort xs)
 
-def prop_ISortSorts (xs: List Nat) := ordered (isort xs) == True
+def prop_ISortSorts (xs: List Nat) := ordered (isort xs) == true
 def prop_ISortCount (x: Nat) (xs: List Nat) := count x (isort xs) == count x xs
-def prop_ISortPermutes (xs: List Nat) := isPermutation (isort xs) xs == True
+def prop_ISortPermutes (xs: List Nat) := isPermutation (isort xs) xs == true
 
 --------------------------------------------------------------------------------
 -- returns true if more work is needed, plus a more-sorted list
@@ -193,9 +193,9 @@ termination_by hp => numElem hp
 def hsort : List Nat → List Nat
  | xs => toList (toHeap xs)
 
-def prop_HSortSorts (xs: List Nat) := ordered (hsort xs) == True
+def prop_HSortSorts (xs: List Nat) := ordered (hsort xs) == true
 def prop_HSortCount (x: Nat) (xs: List Nat) := count x (hsort xs) == count x xs
-def prop_HSortPermutes (xs: List Nat) := isPermutation (hsort xs) xs == True
+def prop_HSortPermutes (xs: List Nat) := isPermutation (hsort xs) xs == true
 def prop_HSortIsSort (xs: List Nat) := hsort xs == isort xs
 
 
@@ -209,9 +209,9 @@ def toHeap2 : List Nat → MyHeap
 def hsort2 : List Nat → List Nat
 | xs => toList (toHeap2 xs)
 
-def prop_HSort2Sorts (xs: List Nat) := ordered (hsort2 xs) == True
+def prop_HSort2Sorts (xs: List Nat) := ordered (hsort2 xs) == true
 def prop_HSort2Count (x: Nat) (xs: List Nat) := count x (hsort2 xs) == count x xs
-def prop_HSort2Permutes (xs: List Nat) := isPermutation (hsort2 xs) xs == True
+def prop_HSort2Permutes (xs: List Nat) := isPermutation (hsort2 xs) xs == true
 def prop_HSort2IsSort (xs: List Nat) := hsort2 xs == isort xs
 
 def risers : List Nat → List (List Nat)
