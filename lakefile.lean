@@ -13,4 +13,4 @@ require mathlib from git
 
 @[default_target]
 lean_lib «LeanSrc» where
-  -- add any library configuration options here
+  globs := #[.submodules `LeanSrc]

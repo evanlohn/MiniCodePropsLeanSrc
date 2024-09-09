@@ -1,4 +1,4 @@
-import mathlib
+import Mathlib
 
 
 -- We'll just use Lean's Nat
